@@ -1,10 +1,10 @@
 [
   {
     "trailID": 1,
-    "name": "Sample Trail",
-    "description": "A test trail for Render deployment",
-    "distance": 2.5,
-    "difficulty": "Easy",
+    "name": "Hit Cove Trail",
+    "description": "Test Trail",
+    "distance": 3.6,
+    "difficulty": "Medium",
     "posts": []
   }
 ]
