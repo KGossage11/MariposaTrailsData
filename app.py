@@ -12,8 +12,7 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO = os.getenv("REPO")
 FILE_PATH = "data.json"
 
-g = Github(GITHUB_TOKEN)
-repo = g.get_repo(REPO)
+repo = Github(GITHUB_TOKEN).get_repo(REPO)
 
 @app.route('/')
 def home():
@@ -22,12 +21,8 @@ def home():
 @app.route('/data', methods=['GET'])
 def get_trails():
     try:
-        # Load local file if exists
-        if os.path.exists(FILE_PATH):
-            with open(FILE_PATH, 'r') as f:
-                data = json.load(f)
-        else:
-            data = []
+        file_content = repo.get_contents(FILE_PATH)
+        data = json.loads(file_content.decoded_content.decode())
         return jsonify(data)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -39,18 +34,18 @@ def update_trails():
         if not isinstance(new_trails, list):
             return jsonify({"error": "Expected a list of trails"}), 400
 
-        # --- Step 1: fetch existing JSON from GitHub ---
+        # Fetch JSON from github
         try:
             file_content = repo.get_contents(FILE_PATH)
             existing_data = json.loads(file_content.decoded_content.decode())
         except Exception:
-            # If file doesn't exist yet
+            # If no data yet
             existing_data = []
 
-        # --- Step 2: append new trails ---
+        # append new trails
         combined_data = existing_data + new_trails
 
-        # --- Step 3: update the GitHub file ---
+        # update github file
         content_str = json.dumps(combined_data, indent=2)
         commit_message = "Admin page update via Flask API"
 
