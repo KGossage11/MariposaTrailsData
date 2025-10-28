@@ -5,13 +5,13 @@ import os
 app = Flask(__name__)
 
 # Path to local JSON file (in the repo)
-DATA_FILE = os.path.join(os.path.dirname(__file__), 'trails.json')
+DATA_FILE = os.path.join(os.path.dirname(__file__), 'data.json')
 
 @app.route('/')
 def home():
     return "Mariposa Trails API is running!"
 
-@app.route('/trails', methods=['GET'])
+@app.route('/data', methods=['GET'])
 def get_trails():
     try:
         with open(DATA_FILE, 'r') as file:
