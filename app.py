@@ -11,6 +11,10 @@ DATA_FILE = os.path.join(os.path.dirname(__file__), 'data.json')
 def home():
     return "Mariposa Trails API is running!"
 
+@app.route('/debug-path')
+def debug_path():
+    return {"current_dir": os.getcwd(), "data_file": DATA_FILE, "exists": os.path.exists(DATA_FILE)}
+
 @app.route('/data', methods=['GET'])
 def get_trails():
     try:
