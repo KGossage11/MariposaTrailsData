@@ -1,0 +1,10 @@
+[
+  {
+    "trailID": 1,
+    "name": "Sample Trail",
+    "description": "A test trail for Render deployment",
+    "distance": 2.5,
+    "difficulty": "Easy",
+    "posts": []
+  }
+]

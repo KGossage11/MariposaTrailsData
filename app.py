@@ -1,12 +1,24 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
+import json
 import os
 
 app = Flask(__name__)
 
+# Path to local JSON file (in the repo)
+DATA_FILE = os.path.join(os.path.dirname(__file__), 'trails.json')
+
 @app.route('/')
 def home():
-    return jsonify({"message": "Flask backend is running!"})
+    return "Mariposa Trails API is running!"
+
+@app.route('/trails', methods=['GET'])
+def get_trails():
+    try:
+        with open(DATA_FILE, 'r') as file:
+            data = json.load(file)
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
