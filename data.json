@@ -6,5 +6,12 @@
     "distance": 3.6,
     "difficulty": "Medium",
     "posts": []
+  },
+  {
+    "name": "Testing",
+    "description": "Test Please work",
+    "distance": 5.4,
+    "difficulty": "Hard",
+    "posts": []
   }
 ]
