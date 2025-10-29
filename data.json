@@ -6,5 +6,32 @@
     "distance": 3.6,
     "difficulty": "Medium",
     "posts": []
+  },
+  {
+    "name": "Testing",
+    "description": "Test Please work",
+    "distance": 5.4,
+    "difficulty": "Hard",
+    "posts": []
+  },
+  {
+    "name": "Proof this works",
+    "description": "This trails will be uploaded to github",
+    "distance": 4.5,
+    "difficulty": "Medium",
+    "posts": [
+      {
+        "location": {
+          "latitude": 3.42,
+          "longitude": 3.234
+        },
+        "description": "Very cool",
+        "postText": "Cool content",
+        "images": [
+          "133756634514847884.jpg"
+        ],
+        "audio": "TheNorthWindAndTheSun.mp3"
+      }
+    ]
   }
 ]
