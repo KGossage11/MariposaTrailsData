@@ -4,6 +4,7 @@ from github import Github
 import json
 import os
 
+#Postman for testing
 
 app = Flask(__name__)
 CORS(app)
@@ -56,10 +57,33 @@ def update_trails():
             # Create new file
             repo.create_file(FILE_PATH, commit_message, content_str)
 
+        # Increment version number
+        try:
+            version_file = repo.get_contents("version.json")
+            version_data = json.loads(version_file.decoded_content.decode())
+            current_version = version_data.get("version", 0)
+            new_version = current_version + 1
+
+            repo.update_file(
+                "version.json",
+                f"Increment version to {new_version}",
+                json.dumps({"version": new_version}, indent=2),
+                version_file.sha
+            )
+        except Exception:
+            # If version.json doesn't exist yet
+            new_version = 1
+            repo.create_file(
+                "version.json",
+                "Create version.json",
+                json.dumps({"version": new_version}, indent=2)
+            )
+
         return jsonify({"success": True, "message": "GitHub data.json updated!"})
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
     
 if __name__ == '__main__':
     app.run(debug=True)
