@@ -40,5 +40,12 @@
     "distance": 2,
     "difficulty": "Easy",
     "posts": []
+  },
+  {
+    "name": "Mariposa Trail",
+    "description": "Cool trail in Mariposa",
+    "distance": 3.4,
+    "difficulty": "Medium",
+    "posts": []
   }
 ]
