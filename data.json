@@ -47,5 +47,12 @@
     "distance": 3.4,
     "difficulty": "Medium",
     "posts": []
+  },
+  {
+    "name": "",
+    "description": "",
+    "distance": "",
+    "difficulty": "Easy",
+    "posts": []
   }
 ]
