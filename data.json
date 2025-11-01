@@ -47,5 +47,12 @@
     "distance": 3.4,
     "difficulty": "Medium",
     "posts": []
+  },
+  {
+    "name": "trail",
+    "description": "go",
+    "distance": 1,
+    "difficulty": "Easy",
+    "posts": []
   }
 ]
