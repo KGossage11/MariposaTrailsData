@@ -54,5 +54,12 @@
     "distance": 1,
     "difficulty": "Easy",
     "posts": []
+  },
+  {
+    "name": "Something",
+    "description": "poop",
+    "distance": 4,
+    "difficulty": "Easy",
+    "posts": []
   }
 ]
