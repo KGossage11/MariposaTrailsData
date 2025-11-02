@@ -33,5 +33,33 @@
         "audio": "TheNorthWindAndTheSun.mp3"
       }
     ]
+  },
+  {
+    "name": "None",
+    "description": "none",
+    "distance": 2,
+    "difficulty": "Easy",
+    "posts": []
+  },
+  {
+    "name": "Mariposa Trail",
+    "description": "Cool trail in Mariposa",
+    "distance": 3.4,
+    "difficulty": "Medium",
+    "posts": []
+  },
+  {
+    "name": "",
+    "description": "",
+    "distance": "",
+    "difficulty": "Easy",
+    "posts": []
+  },
+  {
+    "name": "",
+    "description": "",
+    "distance": "",
+    "difficulty": "Easy",
+    "posts": []
   }
 ]
