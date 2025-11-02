@@ -6,5 +6,34 @@
     "distance": 3.6,
     "difficulty": "Medium",
     "posts": []
+  },
+  {
+    "name": "Hite Cove Version Test",
+    "description": "Testing version number function",
+    "distance": 5.6,
+    "difficulty": "Medium",
+    "posts": [
+      {
+        "location": {
+          "latitude": 3.123,
+          "longitude": 4.431
+        },
+        "description": "Testing version number",
+        "postText": "testing version number",
+        "images": [],
+        "audio": null
+      },
+      {
+        "location": {
+          "latitude": 4.234,
+          "longitude": 4.2134
+        },
+        "description": "Testing version number",
+        "postText": "testing version number",
+        "images": [],
+        "audio": null
+      }
+    ],
+    "version": 7
   }
 ]
