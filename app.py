@@ -4,8 +4,6 @@ from github import Github
 import json
 import os
 
-#Postman for testing
-
 app = Flask(__name__)
 CORS(app)
 
@@ -35,28 +33,6 @@ def update_trails():
         if not isinstance(new_trails, list):
             return jsonify({"error": "Expected a list of trails"}), 400
 
-        # Fetch JSON from github
-        try:
-            file_content = repo.get_contents(FILE_PATH)
-            existing_data = json.loads(file_content.decoded_content.decode())
-        except Exception:
-            # If no data yet
-            existing_data = []
-
-        # append new trails
-        combined_data = existing_data + new_trails
-
-        # update github file
-        content_str = json.dumps(combined_data, indent=2)
-        commit_message = "Admin page update via Flask API"
-
-        if 'file_content' in locals():
-            # Update existing file
-            repo.update_file(FILE_PATH, commit_message, content_str, file_content.sha)
-        else:
-            # Create new file
-            repo.create_file(FILE_PATH, commit_message, content_str)
-
         # Increment version number
         try:
             version_file = repo.get_contents("version.json")
@@ -78,6 +54,30 @@ def update_trails():
                 "Create version.json",
                 json.dumps({"version": new_version}, indent=2)
             )
+
+        # Fetch JSON from github
+        try:
+            file_content = repo.get_contents(FILE_PATH)
+            existing_data = json.loads(file_content.decoded_content.decode())
+        except Exception:
+            # If no data yet
+            existing_data = []
+
+        # append new trails
+        combined_data = existing_data + new_trails
+        for trail in new_trails:
+            trail["version"] = new_version
+
+        # update github file
+        content_str = json.dumps(combined_data, indent=2)
+        commit_message = "Admin page update via Flask API"
+
+        if 'file_content' in locals():
+            # Update existing file
+            repo.update_file(FILE_PATH, commit_message, content_str, file_content.sha)
+        else:
+            # Create new file
+            repo.create_file(FILE_PATH, commit_message, content_str)
 
         return jsonify({"success": True, "message": "GitHub data.json updated!"})
 
