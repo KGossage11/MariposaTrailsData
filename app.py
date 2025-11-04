@@ -26,6 +26,16 @@ def get_trails():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/version', methods=['GET'])
+def get_version():
+    try:
+        version_file = repo.get_contents("version.json")
+        version_data = json.loads(version_file.decoded_content.decode())
+        return jsonify(version_data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route('/update', methods=['POST'])
 def update_trails():
     try:
