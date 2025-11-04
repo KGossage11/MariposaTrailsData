@@ -1,1 +1,38 @@
-
+[
+  {
+    "name": "Hite Cove",
+    "description": "A long beautiful trail",
+    "distance": 3.4,
+    "difficulty": "Medium",
+    "posts": [
+      {
+        "postNum": "1",
+        "location": {
+          "latitude": 2.31,
+          "longitude": 4.12341
+        },
+        "description": "A cool post description",
+        "postText": "Some cool post content",
+        "images": [],
+        "audio": "TheNorthWindAndTheSun.mp3",
+        "version": 1
+      },
+      {
+        "postNum": "2",
+        "location": {
+          "latitude": 3.2342,
+          "longitude": 6.431
+        },
+        "description": "Cool post description 2",
+        "postText": "Cool post content 2",
+        "images": [
+          "133756634514847884.jpg",
+          "133768921230793232.jpg"
+        ],
+        "audio": null,
+        "version": 1
+      }
+    ],
+    "version": 1
+  }
+]
