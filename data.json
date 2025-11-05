@@ -15,7 +15,7 @@
         "postText": "Some cool post content",
         "images": [],
         "audio": "TheNorthWindAndTheSun.mp3",
-        "version": 1
+        "version": 5
       },
       {
         "postNum": "2",
@@ -30,10 +30,10 @@
           "133768921230793232.jpg"
         ],
         "audio": null,
-        "version": 1
+        "version": 5
       }
     ],
-    "version": 1
+    "version": 5
   },
   {
     "name": "Yosemite",
@@ -51,9 +51,9 @@
         "postText": "content yosemite",
         "images": [],
         "audio": null,
-        "version": 2
+        "version": 5
       }
     ],
-    "version": 2
+    "version": 5
   }
 ]
