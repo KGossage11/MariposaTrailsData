@@ -55,5 +55,26 @@
       }
     ],
     "version": 5
+  },
+  {
+    "name": "New Trail",
+    "description": "A long beautiful trail",
+    "distance": 3.4,
+    "difficulty": "Medium",
+    "posts": [
+      {
+        "postNum": "1",
+        "location": {
+          "latitude": 2.32,
+          "longitude": 6.23
+        },
+        "description": "add new post to trail",
+        "postText": "new post",
+        "images": [],
+        "audio": null,
+        "version": 10
+      }
+    ],
+    "version": 10
   }
 ]
