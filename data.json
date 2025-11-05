@@ -34,5 +34,26 @@
       }
     ],
     "version": 1
+  },
+  {
+    "name": "Yosemite",
+    "description": "Y1",
+    "distance": 7.8,
+    "difficulty": "Easy",
+    "posts": [
+      {
+        "postNum": "1",
+        "location": {
+          "latitude": 4.56,
+          "longitude": 4.21
+        },
+        "description": "Description yosemite",
+        "postText": "content yosemite",
+        "images": [],
+        "audio": null,
+        "version": 2
+      }
+    ],
+    "version": 2
   }
 ]
