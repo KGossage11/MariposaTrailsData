@@ -76,5 +76,13 @@
       }
     ],
     "version": 10
+  },
+  {
+    "name": "Cool New",
+    "description": "Cool trail",
+    "distance": 3.2,
+    "difficulty": "Easy",
+    "posts": [],
+    "version": 11
   }
 ]
