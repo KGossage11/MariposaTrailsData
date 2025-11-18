@@ -14,8 +14,7 @@
         "description": "Edited Post",
         "postText": "Some cool post content",
         "images": [],
-        "audio": "TheNorthWindAndTheSun.mp3",
-        "version": 5
+        "version": 27
       },
       {
         "postNum": "2",
@@ -25,85 +24,10 @@
         },
         "description": "Cool post description 2",
         "postText": "Cool post content 2",
-        "images": [
-          "133756634514847884.jpg",
-          "133768921230793232.jpg"
-        ],
-        "audio": null,
-        "version": 5
-      }
-    ],
-    "version": 26
-  },
-  {
-    "name": "Yosemite",
-    "description": "Y1",
-    "distance": 7.8,
-    "difficulty": "Easy",
-    "posts": [
-      {
-        "postNum": "1",
-        "location": {
-          "latitude": 4.56,
-          "longitude": 4.21
-        },
-        "description": "Description yosemite",
-        "postText": "content yosemite",
         "images": [],
-        "audio": null,
-        "version": 5
+        "version": 27
       }
     ],
-    "version": 25
-  },
-  {
-    "name": "New Trail",
-    "description": "A long beautiful trail",
-    "distance": 3.4,
-    "difficulty": "Medium",
-    "posts": [
-      {
-        "postNum": "1",
-        "location": {
-          "latitude": 2.32,
-          "longitude": 6.23
-        },
-        "description": "add new post to trail",
-        "postText": "new post",
-        "images": [],
-        "audio": null,
-        "version": 10
-      }
-    ],
-    "version": 25
-  },
-  {
-    "name": "Cool New",
-    "description": "Cool trail",
-    "distance": 3.2,
-    "difficulty": "Easy",
-    "posts": [],
-    "version": 11
-  },
-  {
-    "name": "Mariposa Trail",
-    "description": "Located in Mariposa County",
-    "distance": 3.5,
-    "difficulty": "Easy",
-    "posts": [
-      {
-        "postNum": "",
-        "location": {
-          "latitude": "",
-          "longitude": ""
-        },
-        "description": "",
-        "postText": "",
-        "images": [],
-        "audio": null,
-        "version": 12
-      }
-    ],
-    "version": 12
+    "version": 27
   }
 ]
