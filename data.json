@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "trailID": "7ad9d2f7-9bbd-49d8-a044-92667eb824ed",
+    "name": "Hite Cove Trail",
+    "description": "Hite cove is a beautiful trail",
+    "distance": 6.7,
+    "difficulty": "Easy",
+    "posts": [
+      {
+        "postNum": "1",
+        "trailID": "7ad9d2f7-9bbd-49d8-a044-92667eb824ed",
+        "location": {
+          "latitude": 2.342,
+          "longitude": 2.341
+        },
+        "description": "Hite cove post one description",
+        "postText": "Hite cove post one content",
+        "images": [],
+        "version": 29
+      }
+    ],
+    "version": 29
+  }
+]
