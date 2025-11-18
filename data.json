@@ -18,21 +18,9 @@
         "images": [
           "uploads/133756634514847884.jpg"
         ],
-        "version": 33
-      },
-      {
-        "postNum": "2",
-        "trailID": 1,
-        "location": {
-          "latitude": 3.3431,
-          "longitude": 4.1431
-        },
-        "description": "Post 2 Description",
-        "postText": "Post 2 Content",
-        "images": [],
-        "version": 33
+        "version": 34
       }
     ],
-    "version": 33
+    "version": 34
   }
 ]
