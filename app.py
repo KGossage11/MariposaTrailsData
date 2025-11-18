@@ -178,10 +178,10 @@ def update_trails():
 
                 # add new post to existing trail
                 existing_posts = existing_trail.get("posts", [])
-                existing_post_ids = {p["postID"] for p in existing_posts}
+                existing_post_nums = {p["postNum"] for p in existing_posts}
 
                 for post in new_trail.get("posts", []):
-                    if post["postID"] not in existing_post_ids:
+                    if post["postNum"] not in existing_post_nums:
                         post["version"] = new_version
                         existing_posts.append(post)
 
