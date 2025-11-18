@@ -167,35 +167,44 @@ def update_trails():
             # If no data yet
             existing_data = []
 
-        trail_map = {t["name"]: t for t in existing_data}
+        # trail_map = {t["name"]: t for t in existing_data}
 
-        for new_trail in new_trails:
-            trail_name = new_trail["name"]
-            new_trail["version"] = new_version
+        # for new_trail in new_trails:
+        #     trail_name = new_trail["name"]
+        #     new_trail["version"] = new_version
 
-            if trail_name in trail_map:
-                existing_trail = trail_map[trail_name]
+        #     if trail_name in trail_map:
+        #         existing_trail = trail_map[trail_name]
 
-                # add new post to existing trail
-                existing_posts = existing_trail.get("posts", [])
-                existing_post_nums = {p["postNum"] for p in existing_posts}
+        #         # add new post to existing trail
+        #         existing_posts = existing_trail.get("posts", [])
+        #         existing_post_nums = {p["postNum"] for p in existing_posts}
 
-                for post in new_trail.get("posts", []):
-                    if post["postNum"] not in existing_post_nums:
-                        post["version"] = new_version
-                        existing_posts.append(post)
+        #         for post in new_trail.get("posts", []):
+        #             if post["postNum"] not in existing_post_nums:
+        #                 post["version"] = new_version
+        #                 existing_posts.append(post)
 
-                existing_trail["posts"] = existing_posts
-                existing_trail["version"] = new_version
+        #         existing_trail["posts"] = existing_posts
+        #         existing_trail["version"] = new_version
 
-            else:
-                # for new trail
-                for post in new_trail.get("posts", []):
-                    post["version"] = new_version
-                trail_map[trail_name] = new_trail
+        #     else:
+        #         # for new trail
+        #         for post in new_trail.get("posts", []):
+        #             post["version"] = new_version
+        #         trail_map[trail_name] = new_trail
 
-        # append new trails
-        combined_data = list(trail_map.values())
+        # # append new trails
+        # combined_data = list(trail_map.values())
+
+        # Apply version number to all trails and posts
+        for trail in new_trails:
+            trail["version"] = new_version
+            for post in trail.get("posts", []):
+                post["version"] = new_version
+
+        # Overwrite data.json completely — full sync with admin page
+        combined_data = new_trails
 
         # update github file
         content_str = json.dumps(combined_data, indent=2)
