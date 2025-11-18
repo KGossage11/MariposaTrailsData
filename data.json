@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "trailID": 1,
+    "name": "Hite Cove",
+    "description": "Hite Cove Trail Description",
+    "distance": 6.7,
+    "difficulty": "Easy",
+    "posts": [
+      {
+        "postNum": "1",
+        "trailID": 1,
+        "location": {
+          "latitude": 2.12321,
+          "longitude": 1.32143
+        },
+        "description": "Hite Cove Trail Post 1 Description",
+        "postText": "Hite Cove Trail Post 1 Content",
+        "images": [
+          "uploads/133756634514847884.jpg"
+        ],
+        "version": 32
+      }
+    ],
+    "version": 32
+  }
+]
