@@ -16,12 +16,36 @@
         "description": "Hite Cove Trail Post 1 Description",
         "postText": "Hite Cove Trail Post 1 Content",
         "images": [],
-        "audio": [
-          "uploads/Station_1.m4a"
-        ],
-        "version": 36
+        "version": 37
       }
     ],
-    "version": 36
+    "version": 37
+  },
+  {
+    "trailID": 2,
+    "name": "Test",
+    "description": "Testing",
+    "distance": 1.1,
+    "difficulty": "Hard",
+    "posts": [
+      {
+        "postNum": "1",
+        "trailID": 2,
+        "location": {
+          "latitude": 1.23231,
+          "longitude": 4.1231
+        },
+        "description": "Test",
+        "postText": "Test",
+        "images": [
+          "uploads/Black.jpg"
+        ],
+        "audio": [
+          "uploads/Station_1.mp3"
+        ],
+        "version": 37
+      }
+    ],
+    "version": 37
   }
 ]
