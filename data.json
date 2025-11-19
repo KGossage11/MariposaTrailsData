@@ -10,8 +10,8 @@
         "postNum": "1",
         "trailID": 1,
         "location": {
-          "latitude": 2.12321,
-          "longitude": 1.32143
+          "latitude": 37.5535,
+          "longitude": -119.8345
         },
         "description": "Hite Cove Trail Post 1 Description",
         "postText": "Hite Cove Trail Post 1 Content",
@@ -21,10 +21,10 @@
         "audio": [
           "uploads/TheNorthWindAndTheSun.mp3"
         ],
-        "version": 39
+        "version": 40
       }
     ],
-    "version": 39
+    "version": 40
   },
   {
     "trailID": 2,
@@ -37,15 +37,15 @@
         "postNum": "1",
         "trailID": 2,
         "location": {
-          "latitude": 37.5535,
+          "latitude": 37.5538,
           "longitude": -119.8345
         },
         "description": "Test in bounds",
         "postText": "Test",
         "images": [],
-        "version": 39
+        "version": 40
       }
     ],
-    "version": 39
+    "version": 40
   }
 ]
