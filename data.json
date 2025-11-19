@@ -15,10 +15,12 @@
         },
         "description": "Hite Cove Trail Post 1 Description",
         "postText": "Hite Cove Trail Post 1 Content",
-        "images": [],
-        "version": 41
+        "images": [
+          "uploads/133756634514847884.jpg"
+        ],
+        "version": 42
       }
     ],
-    "version": 41
+    "version": 42
   }
 ]
