@@ -15,37 +15,10 @@
         },
         "description": "Hite Cove Trail Post 1 Description",
         "postText": "Hite Cove Trail Post 1 Content",
-        "images": [
-          "uploads/133756634514847884.jpg"
-        ],
-        "audio": [
-          "uploads/TheNorthWindAndTheSun.mp3"
-        ],
-        "version": 40
-      }
-    ],
-    "version": 40
-  },
-  {
-    "trailID": 2,
-    "name": "Test",
-    "description": "Testing",
-    "distance": 1.1,
-    "difficulty": "Hard",
-    "posts": [
-      {
-        "postNum": "1",
-        "trailID": 2,
-        "location": {
-          "latitude": 37.5538,
-          "longitude": -119.8345
-        },
-        "description": "Test in bounds",
-        "postText": "Test",
         "images": [],
-        "version": 40
+        "version": 41
       }
     ],
-    "version": 40
+    "version": 41
   }
 ]
