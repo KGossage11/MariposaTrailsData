@@ -15,11 +15,16 @@
         },
         "description": "Hite Cove Trail Post 1 Description",
         "postText": "Hite Cove Trail Post 1 Content",
-        "images": [],
-        "version": 38
+        "images": [
+          "uploads/133756634514847884.jpg"
+        ],
+        "audio": [
+          "uploads/TheNorthWindAndTheSun.mp3"
+        ],
+        "version": 39
       }
     ],
-    "version": 38
+    "version": 39
   },
   {
     "trailID": 2,
@@ -38,9 +43,9 @@
         "description": "Test in bounds",
         "postText": "Test",
         "images": [],
-        "version": 38
+        "version": 39
       }
     ],
-    "version": 38
+    "version": 39
   }
 ]
