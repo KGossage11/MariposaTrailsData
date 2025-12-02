@@ -4,10 +4,25 @@ from flask_cors import CORS
 from github import Github
 import json
 import os
+import bcrypt
+import jwt
+import datetime
+from functools import wraps
 
 app = Flask(__name__)
 CORS(app)
 
+# === AUTH CONFIG ===
+ADMIN_PASSWORD_HASH = os.getenv("ADMIN_PASSWORD_HASH")  # bcrypt hash
+JWT_SECRET = os.getenv("JWT_SECRET")  # secret for signing tokens
+JWT_EXPIRATION_HOURS = 4
+
+if not ADMIN_PASSWORD_HASH:
+    print("WARNING: ADMIN_PASSWORD_HASH not set!")
+if not JWT_SECRET:
+    print("WARNING: JWT_SECRET not set!")
+
+# === GITHUB CONFIG ===
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO = os.getenv("REPO")
 FILE_PATH = "data.json"
@@ -15,6 +30,60 @@ UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), "uploads")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 repo = Github(GITHUB_TOKEN).get_repo(REPO)
+
+# ----------------------------------------------------------
+# AUTH MIDDLEWARE
+# ----------------------------------------------------------
+
+def require_auth(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        auth_header = request.headers.get("Authorization")
+
+        if not auth_header or not auth_header.startswith("Bearer "):
+            return jsonify({"error": "Unauthorized"}), 401
+
+        token = auth_header.split(" ")[1]
+
+        try:
+            jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+        except jwt.ExpiredSignatureError:
+            return jsonify({"error": "Token expired"}), 401
+        except Exception:
+            return jsonify({"error": "Invalid token"}), 401
+
+        return func(*args, **kwargs)
+
+    return wrapper
+
+# ----------------------------------------------------------
+# LOGIN ENDPOINT
+# ----------------------------------------------------------
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json or {}
+    password = data.get("password")
+
+    if not password:
+        return jsonify({"error": "Password required"}), 400
+
+    try:
+        # Compare plaintext password to stored bcrypt hash
+        if not bcrypt.checkpw(password.encode(), ADMIN_PASSWORD_HASH.encode()):
+            return jsonify({"error": "Invalid password"}), 401
+    except Exception as e:
+        return jsonify({"error": f"Hash comparison failed: {str(e)}"}), 500
+
+    # Create JWT token
+    exp = datetime.datetime.utcnow() + datetime.timedelta(hours=JWT_EXPIRATION_HOURS)
+    token = jwt.encode({"exp": exp, "role": "admin"}, JWT_SECRET, algorithm="HS256")
+
+    return jsonify({"token": token})
+
+# ----------------------------------------------------------
+# PUBLIC ROUTES (unchanged)
+# ----------------------------------------------------------
 
 @app.route('/')
 def home():
@@ -38,9 +107,12 @@ def get_version():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
+# ----------------------------------------------------------
+# PROTECTED UPDATE ROUTE (same logic, auth added)
+# ----------------------------------------------------------
 
 @app.route('/update', methods=['POST'])
+@require_auth
 def update_trails():
     try:
         # Parse trails metadata from form
@@ -54,7 +126,7 @@ def update_trails():
         if not isinstance(new_trails, list):
             return jsonify({"error": "Expected a list of trails"}), 400
 
-        # Save uploaded files, upload to GitHub, and update metadata
+        # Save uploaded files and upload to GitHub
         for t_index, trail in enumerate(new_trails):
             for p_index, post in enumerate(trail.get('posts', [])):
                 # Handle images
@@ -67,10 +139,8 @@ def update_trails():
                         filename = secure_filename(file.filename)
                         save_path = os.path.join(UPLOAD_FOLDER, filename)
                         file.save(save_path)
-                        # Upload to GitHub uploads/ folder
                         github_upload_path = f"uploads/{filename}"
                         try:
-                            # Check if file exists in repo
                             try:
                                 existing_file = repo.get_contents(github_upload_path)
                                 with open(save_path, "rb") as f:
@@ -81,7 +151,6 @@ def update_trails():
                                         existing_file.sha
                                     )
                             except Exception:
-                                # File does not exist, create it
                                 with open(save_path, "rb") as f:
                                     repo.create_file(
                                         github_upload_path,
@@ -107,10 +176,8 @@ def update_trails():
                         filename = secure_filename(file.filename)
                         save_path = os.path.join(UPLOAD_FOLDER, filename)
                         file.save(save_path)
-                        # Upload to GitHub uploads/ folder
                         github_upload_path = f"uploads/{filename}"
                         try:
-                            # Check if file exists in repo
                             try:
                                 existing_file = repo.get_contents(github_upload_path)
                                 with open(save_path, "rb") as f:
@@ -121,7 +188,6 @@ def update_trails():
                                         existing_file.sha
                                     )
                             except Exception:
-                                # File does not exist, create it
                                 with open(save_path, "rb") as f:
                                     repo.create_file(
                                         github_upload_path,
@@ -137,13 +203,12 @@ def update_trails():
                 if audio_files:
                     post['audio'] = audio_files
 
-        # Increment version number
+        # Increment version
         try:
             version_file = repo.get_contents("version.json")
             version_data = json.loads(version_file.decoded_content.decode())
             current_version = version_data.get("version", 0)
             new_version = current_version + 1
-
             repo.update_file(
                 "version.json",
                 f"Increment version to {new_version}",
@@ -151,7 +216,6 @@ def update_trails():
                 version_file.sha
             )
         except Exception:
-            # If version.json doesn't exist yet
             new_version = 1
             repo.create_file(
                 "version.json",
@@ -159,69 +223,28 @@ def update_trails():
                 json.dumps({"version": new_version}, indent=2)
             )
 
-        # Fetch JSON from github
-        try:
-            file_content = repo.get_contents(FILE_PATH)
-            existing_data = json.loads(file_content.decoded_content.decode())
-        except Exception:
-            # If no data yet
-            existing_data = []
-
-        # trail_map = {t["name"]: t for t in existing_data}
-
-        # for new_trail in new_trails:
-        #     trail_name = new_trail["name"]
-        #     new_trail["version"] = new_version
-
-        #     if trail_name in trail_map:
-        #         existing_trail = trail_map[trail_name]
-
-        #         # add new post to existing trail
-        #         existing_posts = existing_trail.get("posts", [])
-        #         existing_post_nums = {p["postNum"] for p in existing_posts}
-
-        #         for post in new_trail.get("posts", []):
-        #             if post["postNum"] not in existing_post_nums:
-        #                 post["version"] = new_version
-        #                 existing_posts.append(post)
-
-        #         existing_trail["posts"] = existing_posts
-        #         existing_trail["version"] = new_version
-
-        #     else:
-        #         # for new trail
-        #         for post in new_trail.get("posts", []):
-        #             post["version"] = new_version
-        #         trail_map[trail_name] = new_trail
-
-        # # append new trails
-        # combined_data = list(trail_map.values())
-
-        # Apply version number to all trails and posts
+        # Overwrite data.json
         for trail in new_trails:
             trail["version"] = new_version
             for post in trail.get("posts", []):
                 post["version"] = new_version
 
-        # Overwrite data.json completely — full sync with admin page
-        combined_data = new_trails
-
-        # update github file
-        content_str = json.dumps(combined_data, indent=2)
+        content_str = json.dumps(new_trails, indent=2)
         commit_message = f"Admin page update via Flask API (v{new_version})"
 
-        if 'file_content' in locals():
-            # Update existing file
+        try:
+            file_content = repo.get_contents(FILE_PATH)
             repo.update_file(FILE_PATH, commit_message, content_str, file_content.sha)
-        else:
-            # Create new file
+        except Exception:
             repo.create_file(FILE_PATH, commit_message, content_str)
 
         return jsonify({"success": True, "message": "GitHub data.json updated!"})
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
-    
+
+
+# ----------------------------------------------------------
+
 if __name__ == '__main__':
     app.run(debug=True)
