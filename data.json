@@ -19,7 +19,7 @@
           "uploads/Station1.jpg"
         ],
         "audio": "uploads/Station_1.m4a",
-        "version": 64
+        "version": 65
       },
       {
         "postNum": "2",
@@ -34,7 +34,7 @@
           "uploads/Station2.jpeg.jpeg"
         ],
         "audio": "uploads/Station_2.m4a",
-        "version": 64
+        "version": 65
       },
       {
         "postNum": "3",
@@ -49,7 +49,7 @@
           "uploads/Station3.jpeg"
         ],
         "audio": "uploads/Station_3.m4a",
-        "version": 64
+        "version": 65
       },
       {
         "postNum": "4",
@@ -64,7 +64,7 @@
           "uploads/Station4.jpeg"
         ],
         "audio": "uploads/Station_4.m4a",
-        "version": 64
+        "version": 65
       },
       {
         "postNum": "5",
@@ -79,7 +79,7 @@
           "uploads/Station5.jpeg"
         ],
         "audio": "uploads/Station_5.m4a",
-        "version": 64
+        "version": 65
       },
       {
         "postNum": "6",
@@ -94,7 +94,7 @@
           "uploads/Station6.jpeg"
         ],
         "audio": "uploads/Station_6.m4a",
-        "version": 64
+        "version": 65
       },
       {
         "postNum": "7",
@@ -108,7 +108,10 @@
         "images": [
           "uploads/Station7.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station7.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "8",
@@ -122,7 +125,10 @@
         "images": [
           "uploads/Station8.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station8.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "9",
@@ -136,7 +142,10 @@
         "images": [
           "uploads/Station9.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station9.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "10",
@@ -150,7 +159,10 @@
         "images": [
           "uploads/Station10and14and15.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station10.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "11",
@@ -164,7 +176,10 @@
         "images": [
           "uploads/Station11.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station11.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "12",
@@ -178,7 +193,10 @@
         "images": [
           "uploads/Station12.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station12.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "13",
@@ -192,7 +210,10 @@
         "images": [
           "uploads/Station13.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station13.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "14",
@@ -206,7 +227,10 @@
         "images": [
           "uploads/Station10and14and15.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station14.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "15",
@@ -220,7 +244,10 @@
         "images": [
           "uploads/Station10and14and15.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station15.m4a"
+        ],
+        "version": 65
       },
       {
         "postNum": "16",
@@ -234,9 +261,12 @@
         "images": [
           "uploads/Station16.jpeg"
         ],
-        "version": 64
+        "audio": [
+          "uploads/Station16.m4a"
+        ],
+        "version": 65
       }
     ],
-    "version": 64
+    "version": 65
   }
 ]
