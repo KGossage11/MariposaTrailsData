@@ -19,7 +19,7 @@
           "uploads/Station1.jpg"
         ],
         "audio": "uploads/Station_1.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "2",
@@ -34,7 +34,7 @@
           "uploads/Station2.jpeg.jpeg"
         ],
         "audio": "uploads/Station_2.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "3",
@@ -49,7 +49,7 @@
           "uploads/Station3.jpeg"
         ],
         "audio": "uploads/Station_3.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "4",
@@ -64,7 +64,7 @@
           "uploads/Station4.jpeg"
         ],
         "audio": "uploads/Station_4.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "5",
@@ -79,7 +79,7 @@
           "uploads/Station5.jpeg"
         ],
         "audio": "uploads/Station_5.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "6",
@@ -94,7 +94,7 @@
           "uploads/Station6.jpeg"
         ],
         "audio": "uploads/Station_6.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "7",
@@ -109,7 +109,7 @@
           "uploads/Station7.jpeg"
         ],
         "audio": "uploads/Station7.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "8",
@@ -124,7 +124,7 @@
           "uploads/Station8.jpeg"
         ],
         "audio": "uploads/Station8.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "9",
@@ -139,7 +139,7 @@
           "uploads/Station9.jpeg"
         ],
         "audio": "uploads/Station9.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "10",
@@ -154,7 +154,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station10.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "11",
@@ -169,7 +169,7 @@
           "uploads/Station11.jpeg"
         ],
         "audio": "uploads/Station11.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "12",
@@ -184,7 +184,7 @@
           "uploads/Station12.jpeg"
         ],
         "audio": "uploads/Station12.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "13",
@@ -199,7 +199,7 @@
           "uploads/Station13.jpeg"
         ],
         "audio": "uploads/Station13.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "14",
@@ -214,7 +214,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station14.m4a",
-        "version": 69
+        "version": 70
       },
       {
         "postNum": "15",
@@ -229,24 +229,9 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station15.m4a",
-        "version": 69
-      },
-      {
-        "postNum": "16",
-        "trailID": 1,
-        "location": {
-          "latitude": 37.640842,
-          "longitude": -119.850096
-        },
-        "description": "The Mill\u2019s Legacy and Restoration",
-        "postText": "Though Hite\u2019s Cove has changed, its story continues. The scars of mining and fire remain visible, but so do the signs of renewal\u2014wildflowers pushing through the soil, birds nesting in old timbers, and new generations walking the same trails once used by miners.\nThe remains of the mills and tramways remind us of the era when innovation met raw determination. Today, Hite\u2019s Cove stands as both a historical site and a thriving ecosystem\u2014proof that nature always finds a way back.\nTake a moment to imagine the hum of the mill, the rush of the Merced below, and the voices of those who came before. Their history lives on in the land itself.\n",
-        "images": [
-          "uploads/Station16.jpeg"
-        ],
-        "audio": "uploads/Station16.m4a",
-        "version": 69
+        "version": 70
       }
     ],
-    "version": 69
+    "version": 70
   }
 ]
