@@ -1,2 +1,6 @@
 # MariposaTrailsData
-Stores the data for trails and posts in JSON format
+---
+## Repo Format
+* Trail and post data stored in data.json
+* Image and audio files stores in uploads/
+* Version number stored in version.json
