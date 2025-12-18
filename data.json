@@ -19,7 +19,7 @@
           "uploads/Station1.jpg"
         ],
         "audio": "uploads/Station_1.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "2",
@@ -34,7 +34,7 @@
           "uploads/Station2.jpeg.jpeg"
         ],
         "audio": "uploads/Station_2.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "3",
@@ -49,7 +49,7 @@
           "uploads/Station3.jpeg"
         ],
         "audio": "uploads/Station_3.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "4",
@@ -64,7 +64,7 @@
           "uploads/Station4.jpeg"
         ],
         "audio": "uploads/Station_4.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "5",
@@ -79,7 +79,7 @@
           "uploads/Station5.jpeg"
         ],
         "audio": "uploads/Station_5.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "6",
@@ -94,7 +94,7 @@
           "uploads/Station6.jpeg"
         ],
         "audio": "uploads/Station_6.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "7",
@@ -109,7 +109,7 @@
           "uploads/Station7.jpeg"
         ],
         "audio": "uploads/Station7.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "8",
@@ -124,7 +124,7 @@
           "uploads/Station8.jpeg"
         ],
         "audio": "uploads/Station8.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "9",
@@ -139,7 +139,7 @@
           "uploads/Station9.jpeg"
         ],
         "audio": "uploads/Station9.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "10",
@@ -154,7 +154,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station10.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "11",
@@ -169,7 +169,7 @@
           "uploads/Station11.jpeg"
         ],
         "audio": "uploads/Station11.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "12",
@@ -184,7 +184,7 @@
           "uploads/Station12.jpeg"
         ],
         "audio": "uploads/Station12.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "13",
@@ -199,7 +199,7 @@
           "uploads/Station13.jpeg"
         ],
         "audio": "uploads/Station13.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "14",
@@ -214,7 +214,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station14.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "15",
@@ -229,7 +229,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station15.m4a",
-        "version": 79
+        "version": 80
       },
       {
         "postNum": "16",
@@ -244,31 +244,9 @@
           "uploads/Station16.jpeg"
         ],
         "audio": "uploads/Station16.m4a",
-        "version": 79
+        "version": 80
       }
     ],
-    "version": 79
-  },
-  {
-    "trailID": 2,
-    "name": "Merced River Trail",
-    "description": "Merced River Trail is a scenic riverside hiking route in the Merced River Recreation Management Area near Mariposa, California. The trail runs roughly along the Merced River southeast of Briceburg and follows an old railroad-grade path through open natural terrain, offering river views and opportunities to stop by the water. It\u2019s moderately easy in sections, about 5.2 miles round-trip depending on how far you go, and is popular for walking, hiking, and enjoying wildflowers and wildlife alongside the river.",
-    "distance": 5.2,
-    "difficulty": "Easy",
-    "posts": [
-      {
-        "postNum": "1",
-        "trailID": 2,
-        "location": {
-          "latitude": 37.640872,
-          "longitude": -119.8501
-        },
-        "description": "Directions from Mariposa Visitor Center",
-        "postText": "Travel 11.7 miles on Highway 140 East, turn left as the Briceburg Visitor Center. Park in either the larger lot next to the river and walk or drive across the bridge and park in the smaller lot to the right. The trail begins at the gate. The Visitor Center is open from May to September.  ",
-        "images": [],
-        "version": 79
-      }
-    ],
-    "version": 79
+    "version": 80
   }
 ]
