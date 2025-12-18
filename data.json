@@ -2,7 +2,7 @@
   {
     "trailID": 1,
     "name": "Hite's Cove",
-    "description": "This is a wonderful hike along the south fork of the Merced River. You will start from Highway 140 near where the south fork enters the main fork of the Merced. The trail travels along the hillside, which is very sunny and exposed, so be sure to bring plenty of water and sun protection. Some sections of the trail are narrow, with steep drop-offs. The route ends where the trail meets Hites Mine Road.",
+    "description": "This is a wonderful hike along the south fork of teh Merced River. You will start from Highway 140 near where the south fork enters the main fork of the Merced. The trail travels along the hillside, which is very sunny and exposed, so be sure to bring plenty of water and sun protection. Some sections of the trail are narrow, with steep drop-offs. The route ends where the trail meets Hites Mine Road.",
     "distance": 6.9,
     "difficulty": "Medium",
     "posts": [
@@ -19,7 +19,7 @@
           "uploads/Station1.jpg"
         ],
         "audio": "uploads/Station_1.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "2",
@@ -34,7 +34,7 @@
           "uploads/Station2.jpeg.jpeg"
         ],
         "audio": "uploads/Station_2.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "3",
@@ -49,7 +49,7 @@
           "uploads/Station3.jpeg"
         ],
         "audio": "uploads/Station_3.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "4",
@@ -64,7 +64,7 @@
           "uploads/Station4.jpeg"
         ],
         "audio": "uploads/Station_4.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "5",
@@ -79,7 +79,7 @@
           "uploads/Station5.jpeg"
         ],
         "audio": "uploads/Station_5.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "6",
@@ -94,7 +94,7 @@
           "uploads/Station6.jpeg"
         ],
         "audio": "uploads/Station_6.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "7",
@@ -109,7 +109,7 @@
           "uploads/Station7.jpeg"
         ],
         "audio": "uploads/Station7.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "8",
@@ -124,7 +124,7 @@
           "uploads/Station8.jpeg"
         ],
         "audio": "uploads/Station8.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "9",
@@ -139,7 +139,7 @@
           "uploads/Station9.jpeg"
         ],
         "audio": "uploads/Station9.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "10",
@@ -154,7 +154,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station10.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "11",
@@ -169,7 +169,7 @@
           "uploads/Station11.jpeg"
         ],
         "audio": "uploads/Station11.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "12",
@@ -184,7 +184,7 @@
           "uploads/Station12.jpeg"
         ],
         "audio": "uploads/Station12.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "13",
@@ -199,7 +199,7 @@
           "uploads/Station13.jpeg"
         ],
         "audio": "uploads/Station13.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "14",
@@ -214,7 +214,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station14.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "15",
@@ -229,7 +229,7 @@
           "uploads/Station10and14and15.jpeg"
         ],
         "audio": "uploads/Station15.m4a",
-        "version": 74
+        "version": 75
       },
       {
         "postNum": "16",
@@ -244,9 +244,9 @@
           "uploads/Station16.jpeg"
         ],
         "audio": "uploads/Station16.m4a",
-        "version": 74
+        "version": 75
       }
     ],
-    "version": 74
+    "version": 75
   }
 ]
